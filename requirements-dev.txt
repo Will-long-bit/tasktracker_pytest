@@ -1,0 +1,2 @@
+# 与 requirements.txt 内容一致（这里单独保留以便 CI / 协作者按需安装）
+-r requirements.txt

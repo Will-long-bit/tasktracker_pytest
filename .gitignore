@@ -1,0 +1,35 @@
+# ----- Python 字节码 / 缓存 -----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ----- 虚拟环境 -----
+.venv/
+venv/
+env/
+ENV/
+
+# ----- 测试 / 工具产物 -----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+report.html
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+
+# ----- 编辑器 / 系统 -----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# ----- 日志 -----
+*.log
+
+# ----- WorkBuddy 项目记忆（不进仓库） -----
+.workbuddy/

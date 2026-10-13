@@ -1,0 +1,15 @@
+# 运行本项目所需的全部依赖（均为常用第三方 pytest 插件）
+pytest>=7.0
+pytest-cov          # 覆盖率统计
+pytest-xdist        # 并行执行（-n auto）
+pytest-mock         # mocker fixture（基于 unittest.mock）
+pytest-timeout      # 单用例超时保护
+pytest-randomly     # 随机化执行顺序（验证用例独立性）
+pytest-rerunfailures # 失败自动重跑（稳定偶发失败）
+pytest-html         # 生成 HTML 测试报告
+pytest-asyncio      # 异步用例支持
+pytest-httpx        # 拦截/模拟 httpx 请求
+pytest-freezegun    # freezetime fixture（冻结时间）
+pytest-factoryboy   # 测试数据工厂（依赖 factory_boy）
+pytest-check        # 软断言（一处失败不中断）
+pytest-datadir      # 从数据文件读取测试数据

@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tasktracker-pytest-advanced"
+version = "0.2.0"
+description = "进阶版 pytest 实战项目：用常见第三方插件（cov/xdist/mock/timeout/randomly/rerunfailures/html/asyncio/httpx/freezegun/factoryboy/check/datadir）测试一个任务管理领域模型。"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov",
+    "pytest-xdist",
+    "pytest-mock",
+    "pytest-timeout",
+    "pytest-randomly",
+    "pytest-rerunfailures",
+    "pytest-html",
+    "pytest-asyncio",
+    "pytest-httpx",
+    "pytest-freezegun",
+    "pytest-factoryboy",
+    "pytest-check",
+    "pytest-datadir",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+# -ra：显示 skip/xfail/reruns 等摘要；--strict-markers：未注册标记报错（防拼写错）
+addopts = "-ra --strict-markers"
+# pytest-asyncio：自动识别 async 用例，无需逐个加 @pytest.mark.asyncio
+asyncio_mode = "auto"
+# 抑制 pytest-freezegun 插件自身调用 LooseVersion 产生的 DeprecationWarning
+# （与本项目代码无关，仅为净化输出）
+filterwarnings = [
+    "ignore::DeprecationWarning:pytest_freezegun",
+]
+markers = [
+    "integration: 标记集成测试（如真实落库/联网）",
+    "slow: 标记耗时较长的用例",
+]
+
+[tool.coverage.run]
+source = ["tasktracker"]
+
+[tool.coverage.report]
+show_missing = true
