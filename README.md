@@ -4,7 +4,6 @@
 > 引入 **13 个常用的第三方 pytest 插件**，并把每个插件都用在「真实用例」上，而非玩具示例。
 >
 > 已在本机调试跑通：**28 passed，2 rerun（flaky 用例重跑后通过），覆盖率 100%**，并产出 HTML 报告。
-> 工程化程度（README / LICENSE / .gitignore / CI）完备，可直接上传 GitHub。
 
 ---
 
