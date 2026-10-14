@@ -30,6 +30,3 @@ coverage.xml
 
 # ----- 日志 -----
 *.log
-
-# ----- WorkBuddy 项目记忆（不进仓库） -----
-.workbuddy/
