@@ -13,11 +13,7 @@ env/
 ENV/
 
 # ----- 测试 / 工具产物 -----
-.pytest_cache/
-.coverage
-.coverage.*
 htmlcov/
-report.html
 coverage.xml
 .mypy_cache/
 .ruff_cache/
